@@ -1,0 +1,131 @@
+:root {
+    --main-sans-sansserif: 'Sen', sans-serif;
+    ;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#links {
+    width: 100%;
+    background-color: rgba(14, 14, 14, 0.685);
+    display: flex;
+    color: white;
+    height: 2.5em;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#links>span {
+    font-family: 'Sen', sans-serif;
+    margin: auto;
+}
+
+#headerimg {
+    width: 100%;
+    height: 24%;
+}
+
+#headertitle {
+    margin: auto;
+    position: absolute;
+    display: inline;
+    left: 20.2vw;
+    top: 20vw;
+    background-color: rgba(173, 153, 105, 0.959);
+    color: #FFFFFF;
+    font-family: 'Heebo', sans-serif;
+    padding: 1em;
+    -webkit-box-shadow: 7px 3px 61px -9px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 7px 3px 61px -9px rgba(0, 0, 0, 0.58);
+    box-shadow: 7px 3px 61px -9px rgba(0, 0, 0, 0.58);
+}
+
+#title {
+    font-size: 7vw;
+    font-weight: 500;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+hr {
+    width: 40vw;
+    background-color: white;
+    height: 0.1vw;
+}
+
+#subtitle {
+    font-style: oblique;
+    margin-left: 10vw;
+    font-size: 2vw;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(243, 243, 243);
+}
+
+.cards {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-gap: 1rem;
+    justify-items: center;
+}
+
+.card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgba(236, 236, 236, 0.884);
+    -webkit-box-shadow: 10px 10px 29px -33px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 29px -33px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 29px -33px rgba(0, 0, 0, 0.75);
+}
+
+.card>img {
+    height: 8vw;
+    padding-top: 10px;
+}
+
+h4 {
+    xfont-family: var(--main-sans-sansserif);
+    font-family: 'Heebo', sans-serif;
+}
+
+h5 {
+    text-align: justify;
+    xfont-family: var(--main-sans-sansserif);
+    font-family: 'Heebo', sans-serif;
+    font-weight: normal;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 608px) {
+    #links {
+        flex-direction: column;
+        overflow: auto;
+        height: 4em;
+        justify-content: space-between;
+    }
+    #headertitle {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
